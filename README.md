@@ -15,7 +15,7 @@ Script hecho en bash , generara tu propio Payload para Android
 
  $ pkg install git
 
- $
+ $ git clone https://github.com/edgarluck/Generador-Payload.git
 
  $ cd Generador-Payload
  
