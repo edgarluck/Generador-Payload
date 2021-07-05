@@ -56,7 +56,8 @@ echo -e ${verde}"       Elige una opcion :
 	  [1] Payload para Android"
 echo -e ${rojo}"          [2] Salir"${verde}
 
-echo -e -n ${cyan} ">>>${verde} " opcion
+echo -e -n ${cyan} ">>>${verde} " 
+read -r opcion
 
 case $opcion in
 	1)  
