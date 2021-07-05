@@ -9,6 +9,7 @@ amarillo='\033[33m'
 magenta='\033[1;35m'
 rojo='\033[31m'
 blanco='\033[37m'
+cyan='\033[1;36m'
 
 clear
 sleep 1
