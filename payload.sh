@@ -12,31 +12,45 @@ blanco='\033[37m'
 
 clear
 sleep 1
+
+SYSTEM=$(uname -o)
+
+if [ "${SYSTEM}" == "Android" ]; then
+        BIN="data/data/com.termux/files/usr/bin"
+        APT="pkg"  
+else
+        BIN="/bin"
+        APT="apt-get"
+fi
+
+
+
+
 # creando payload para andorid
 echo -e ${blanco}"+                                                     +"
 sleep 0.8
 echo -e ${magenta}"+                       ++++++++++++                  +" 
-sleep 0.8
+sleep 0.6
 echo -e ${verde}"+                       [BIENVENIDO]                  +"
-sleep 0.8
+sleep 0.6
 echo -e ${magenta}"+                       ++++++++++++                  +"
-sleep 0.8
+sleep 0.6
 echo -e ${blanco}"+                                                     +"
-sleep 0.8
+sleep 0.6
 echo -e ${magenta}"+            +++++++++++++++++++++++++++++++++++      •"
-sleep 0.8
+sleep 0.6
 echo -e ${verde}"+            [ Herramienta para crear payload  ]      +"
-sleep 0.8
+sleep 0.6
 echo -e ${magenta}"+            +++++++++++++++++++++++++++++++++++      +"
 echo ""
-sleep 0.8
+sleep 0.6
 echo -e ${magenta}"+                      ++++++++++++++                 +"
-sleep 0.8
+sleep 0.6
 echo -e ${verde}"+                      +Para Android+                 +"
-sleep 0.8
+sleep 0.6
 echo -e ${magenta}"+                      ++++++++++++++                 +"
 echo ""
-sleep 0.8
+sleep 0.6
 echo -e ${verde}"       Elige una opcion :
 	
 	  [1] Payload para Android"
