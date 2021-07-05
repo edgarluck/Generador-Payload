@@ -75,7 +75,7 @@ case $opcion in
                 fi
                 sleep 1.5
 
-	    echo ""
+	    echo -e ${verde}""
             read -p "Digite tu LHOST: " LHOST
             sleep 1
 	    echo ""
