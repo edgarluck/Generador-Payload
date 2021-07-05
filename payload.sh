@@ -111,10 +111,12 @@ if [ "${opcion}" == "1" ]; then
         sleep 2.5
         exit
 else
-        echo ""                                                               echo "Hasta luego ^_^"
-        sleep 3                                                       fi
-	    echo -e ${verde}"Hasta pronto ^_^"
-	    sleep 1
+        echo ""
+        echo -e ${verde}"Hasta luego ^_^"
+        echo ""
+        sleep 1.5
+fi
+        exit
 ;;
         2)
 		echo -e ${verde}"Hasta Luego ^_^"
