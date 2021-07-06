@@ -71,7 +71,7 @@ case $opcion in
                          sleep 2
                  else
                          echo -e ${rojo}"
-           Lo sentimos no tiene instalado Metasploit :(
+[-] Lo sentimos no tiene instalado Metasploit :(
                          "${blanco}
                          exit 1
                 fi
@@ -115,6 +115,7 @@ read -r opcion
 
 if [ "${opcion}" == "1" ]; then
         msfconsole
+        echo ""
         echo -e ${verde}"Feliz Hacking ^_^"
         sleep 2.5
         exit
