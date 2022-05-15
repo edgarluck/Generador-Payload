@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-# CREADO POR EDGAR LUCK..[✓]
+# CREADO POR @edgarluck..[✓]
 
 # COLORES
 
